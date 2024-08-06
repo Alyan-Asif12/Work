@@ -8,6 +8,204 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <title>Services - Alyan</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000; /* Full black background for the whole page */
+            color: #fff; /* White text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #000; /* Ensure header background is black */
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #b74b4b; /* Match logo color with active nav link */
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: #fff; /* Match hamburger icon color */
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: #fff; /* White color for nav links */
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b74b4b; /* Rose-red color for active and hover state */
+            border-bottom: 3px solid #b74b4b;
+        }
+
+        .services {
+            padding: 6rem 2rem 4rem; /* Add padding at the top to account for fixed header */
+            background: #000; /* Black background for the section */
+            text-align: center;
+            margin: 2rem auto; /* Center the section and add margin */
+            max-width: 90%;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h1 {
+            margin-bottom: 3rem;
+            color: #fff; /* White color for heading text */
+            font-size: 3rem; /* Larger font size for heading */
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .service {
+            background: #C21E56; /* Rose-red background color for individual service sections */
+            margin: 2rem auto;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Increased shadow effect */
+            color: #000; /* Black color for text */
+            text-align: center;
+            max-width: 800px; /* Limit width for better alignment */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s 0.5s forwards;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.6); /* Enhanced shadow on hover */
+        }
+
+        .service h3 {
+            margin-bottom: 1rem;
+            color: #000; /* Black color for headings */
+            font-size: 2rem; /* Adjust font size for headings */
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.7s 0.5s forwards;
+        }
+
+        .service-logo {
+            width: 120px; /* Increased size of images */
+            margin: 0.5rem;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to logos */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInUp 1s 0.7s forwards;
+        }
+
+        .service-logo:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+        }
+
+        .service p {
+            margin-top: 1rem;
+            font-size: 1.5rem; /* Larger text size for better readability */
+            color: #000; /* Black color for paragraph text */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.9s forwards;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .service {
+                padding: 2rem;
+                max-width: 100%;
+                margin: 1rem auto;
+            }
+
+            .service-logo {
+                width: 80px; /* Smaller size of images for mobile screens */
+            }
+
+            .services h1 {
+                font-size: 2rem; /* Smaller font size for heading on mobile */
+            }
+        }
+
+        @media (max-width: 995px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                display: none;
+                top: 5rem;
+                right: 0;
+                width: 40%;
+                border-left: 3px solid #b74b4b;
+                border-bottom: 3px solid #b74b4b;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem solid;
+                background-color: #161616;
+                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #b74b4b;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +218,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="services.html" class="active">Services</a>
-            <a href="skills.html">Skills</a>
+            <a href="https://www.example.com/skills">Skills</a>
             <a href="https://www.example.com/education">Education</a>
             <a href="https://www.example.com/experience">Experience</a>
             <a href="https://www.example.com/contact">Contact</a>
@@ -32,21 +230,21 @@
             <h1>Our Services</h1>
             <div class="service">
                 <h3>Video Editing</h3>
-                <img src="adobe-premiere.png" alt="Adobe Premiere" class="service-logo adobe-logo">
-                <img src="adobe-aftereffects.png" alt="Adobe After Effects" class="service-logo adobe-logo">
+                <img src="adobe-premiere.png" alt="Adobe Premiere" class="service-logo">
+                <img src="adobe-aftereffects.png" alt="Adobe After Effects" class="service-logo">
                 <p>Professional video editing using Adobe Premiere Pro and Adobe After Effects. We provide high-quality video production, post-production, and motion graphics services to bring your vision to life. Whether it's a promotional video, documentary, or social media content, we've got you covered.</p>
             </div>
             <div class="service">
                 <h3>Graphics Designing</h3>
-                <img src="adobe-photoshop.png" alt="Adobe Photoshop" class="service-logo adobe-logo">
-                <img src="adobe-illustrator.png" alt="Adobe Illustrator" class="service-logo adobe-logo">
+                <img src="adobe-photoshop.png" alt="Adobe Photoshop" class="service-logo">
+                <img src="adobe-illustrator.png" alt="Adobe Illustrator" class="service-logo">
                 <p>Creative graphics designing using Adobe Photoshop and Adobe Illustrator. Our services include logo design, branding, marketing materials, and more. We focus on delivering visually stunning and effective designs that communicate your message clearly and creatively.</p>
             </div>
             <div class="service">
                 <h3>Web Designing</h3>
-                <img src="html-logo.png" alt="HTML" class="service-logo tech-logo">
-                <img src="css-logo.png" alt="CSS" class="service-logo tech-logo">
-                <img src="js-logo.png" alt="JavaScript" class="service-logo tech-logo">
+                <img src="html-logo.png" alt="HTML" class="service-logo">
+                <img src="css-logo.png" alt="CSS" class="service-logo">
+                <img src="js-logo.png" alt="JavaScript" class="service-logo">
                 <p>Modern and responsive web designing using HTML, CSS, and JavaScript. We create beautiful and functional websites that are optimized for performance and user experience. From single-page applications to complex e-commerce sites, our team delivers solutions that meet your needs and exceed your expectations.</p>
             </div>
         </div>
