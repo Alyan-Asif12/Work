@@ -10,12 +10,12 @@
     <title>Experience - Alyan</title>
     <style>
         body {
-            width: 100%;
-            height: 100vh;
-            overflow-x: hidden;
-            background-color: black;
-            color: white;
             font-family: 'Poppins', sans-serif;
+            background: #000; /* Full black background for the whole page */
+            color: #fff; /* White text color for contrast */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         header {
@@ -25,7 +25,7 @@
             left: 0;
             width: 100%;
             padding: 1rem 9%;
-            background-color: black;
+            background-color: #000;
             filter: drop-shadow(10px);
             display: flex;
             justify-content: space-between;
@@ -53,8 +53,7 @@
         }
 
         nav {
-            display: flex;
-            align-items: center;
+            position: relative;
         }
 
         nav a {
@@ -72,7 +71,104 @@
             border-bottom: 3px solid #b74b4b;
         }
 
-        @media (max-width: 995px) {
+        .services,
+        .skills,
+        .experience {
+            min-height: 100vh;
+            padding: 5rem 9% 5rem;
+            background: #000; /* Black background for the section */
+        }
+
+        .experience h1 {
+            margin-bottom: 3rem;
+            color: #fff; /* White color for heading text */
+            font-size: 3rem; /* Larger font size for heading */
+            text-align: center;
+        }
+
+        .experience-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #C21E56; /* Rose-red background color for individual cards */
+            margin: 2rem auto;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow effect */
+            color: #000; /* Black color for text */
+            text-align: center;
+            max-width: 800px; /* Limit width for better alignment */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Lift the card slightly on hover */
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: #000; /* Black color for headings */
+            font-size: 2rem; /* Adjust font size for headings */
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .card img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .card p {
+            margin-top: 1rem;
+            font-size: 1.5rem; /* Larger text size for better readability */
+            color: #000; /* Black color for paragraph text */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: #b74b4b;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: black;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            border: 2px solid #b74b4b;
+            transition: 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            margin: 2rem 0;
+            text-decoration: none;
+        }
+
+        .btn.black {
+            background-color: black;
+            color: #b74b4b;
+            border: 2px solid black;
+        }
+
+        .btn:hover {
+            transform: scale(1.03);
+            background-color: #b74b4b;
+            color: black;
+            box-shadow: 0 0 25px #b74b4b;
+        }
+
+        .btn.black:hover {
+            background-color: #b74b4b;
+            color: black;
+        }
+
+        /* Responsive design */
+        @media(max-width:995px) {
             .hamburger {
                 display: block;
             }
@@ -109,117 +205,23 @@
             }
         }
 
-        .portfolio {
-            padding: 6rem 9% 4rem; /* Adjusted padding for consistency with the header */
-            background: #000;
-            text-align: center;
-        }
-
-        .portfolio h1 {
-            font-size: 3rem;
-            color: #fff;
-            margin-bottom: 3rem;
-            opacity: 0;
-            transform: translateY(-50px);
-            animation: fadeInUp 1s forwards;
-        }
-
-        .portfolio-section {
-            background: #C21E56;
-            margin: 2rem auto;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            color: #000;
-            max-width: 800px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s 0.5s forwards;
-        }
-
-        .portfolio-section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7);
-        }
-
-        .portfolio-section h3 {
-            margin-bottom: 1rem;
-            color: #000;
-            font-size: 2rem;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeInUp 0.7s 0.5s forwards;
-        }
-
-        .portfolio-section a {
-            color: #b74b4b;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s 0.7s forwards;
-        }
-
-        .portfolio-section a:hover {
-            text-decoration: underline;
-        }
-
-        .portfolio-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s 0.9s forwards;
-        }
-
-        .portfolio-images img {
-            width: 150px;
-            margin: 0.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .portfolio-images img:hover {
-            transform: scale(1.1);
-        }
-
         @media (max-width: 1000px) {
-            .portfolio h1 {
-                font-size: 2.5rem;
+            .experience {
+                padding: 3rem 4rem;
             }
 
-            .portfolio-section {
+            .card {
                 padding: 2rem;
+                margin: 1rem auto;
                 max-width: 100%;
             }
 
-            .portfolio-images img {
-                width: 120px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .portfolio h1 {
-                font-size: 2rem;
+            .card img {
+                width: 90%;
             }
 
-            .portfolio-images img {
-                width: 100px;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .experience h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -242,31 +244,22 @@
         </nav>
     </header>
 
-    <section class="portfolio" id="portfolio">
-        <div class="portfolio-content">
-            <h1>My Portfolio</h1>
-
-            <!-- Showreel Section -->
-            <div class="portfolio-section">
+    <section class="experience" id="experience">
+        <div class="experience-content">
+            <h1>My Experience</h1>
+            <div class="card">
                 <h3>Showreel</h3>
-                <iframe width="560" height="315" src="https://drive.google.com/file/d/15iD8Ce4kP73ztp-DemH32hLuh6WGpsLI/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/15iD8Ce4kP73ztp-DemH32hLuh6WGpsLI/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 315px; border-radius: 10px;"></iframe>
+                <p>Check out my showreel to see a compilation of my best work and projects.</p>
             </div>
-
-            <!-- Video Editing Portfolio Section -->
-            <div class="portfolio-section">
+            <div class="card">
                 <h3>Video Editing Portfolio</h3>
-                <a href="https://drive.google.com/drive/folders/1d_Tn79dDzGv9qGejlcZsZ-6Ex7Xpautw" target="_blank">View Video Editing Portfolio</a>
+                <a href="https://drive.google.com/drive/folders/1d_Tn79dDzGv9qGejlcZsZ-6Ex7Xpautw" class="btn black" target="_blank">View Portfolio</a>
+                <p>Explore my video editing portfolio showcasing a range of projects and editing techniques.</p>
             </div>
-
-            <!-- Graphics Design Section -->
-            <div class="portfolio-section">
+            <div class="card">
                 <h3>Graphics Design Portfolio</h3>
-                <div class="portfolio-images">
-                    <!-- Placeholder images, replace with actual images -->
-                    <img src="placeholder1.jpg" alt="Graphics Design 1">
-                    <img src="placeholder2.jpg" alt="Graphics Design 2">
-                    <!-- Add up to 30 images here -->
-                </div>
+                <p>Coming Soon: A collection of graphics design works including various visual projects. Stay tuned for the upload of around 30 pictures showcasing my design skills.</p>
             </div>
         </div>
     </section>
