@@ -329,3 +329,36 @@ span {
         margin-top: 4rem;
     }
 }
+
+
+
+
+
+
+
+/* Services section */
+.services {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.services h1 {
+    margin-bottom: 2rem;
+}
+
+.services .service {
+    background: #fff;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.services .service h3 {
+    margin-bottom: 1rem;
+}
+
+.services .service-logo {
+    width: 50px;
+    margin: 0.5rem;
+}
