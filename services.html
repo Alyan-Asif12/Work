@@ -98,7 +98,13 @@
             max-width: 800px; /* Limit width for better alignment */
             opacity: 0;
             transform: translateY(50px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: fadeInUp 1s 0.5s forwards;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.6); /* Enhanced shadow on hover */
         }
 
         .service h3 {
@@ -115,9 +121,15 @@
             margin: 0.5rem;
             display: inline-block;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to logos */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
             transform: scale(0.8);
             animation: fadeInUp 1s 0.7s forwards;
+        }
+
+        .service-logo:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
         }
 
         .service p {
@@ -134,6 +146,7 @@
             .service {
                 padding: 2rem;
                 max-width: 100%;
+                margin: 1rem auto;
             }
 
             .service-logo {
@@ -205,7 +218,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="services.html" class="active">Services</a>
-            <a href="skills.html">Skills</a>
+            <a href="https://www.example.com/skills">Skills</a>
             <a href="https://www.example.com/education">Education</a>
             <a href="https://www.example.com/experience">Experience</a>
             <a href="https://www.example.com/contact">Contact</a>
