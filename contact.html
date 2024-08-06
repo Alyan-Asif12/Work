@@ -37,11 +37,6 @@
             color: #b74b4b;
             font-weight: 800;
             cursor: pointer;
-            transition: 0.5s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.1);
         }
 
         .hamburger {
@@ -51,12 +46,17 @@
             color: white;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         nav a {
             font-size: 1.8rem;
             color: white;
             margin-left: 4rem;
             font-weight: 500;
-            transition: 0.3s ease;
             border-bottom: 3px solid transparent;
         }
 
@@ -72,17 +72,16 @@
             }
 
             nav {
-                position: absolute;
                 display: none;
+                position: absolute;
                 top: 5rem;
                 right: 0;
                 width: 40%;
                 border-left: 3px solid #b74b4b;
                 border-bottom: 3px solid #b74b4b;
                 border-bottom-left-radius: 2rem;
-                padding: 1rem solid;
+                padding: 1rem;
                 background-color: #161616;
-                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
             }
 
             nav.active {
@@ -93,13 +92,6 @@
                 display: block;
                 font-size: 2rem;
                 margin: 3rem 0;
-            }
-
-            nav a:hover,
-            nav a.active {
-                padding: 1rem;
-                border-radius: 0.5rem;
-                border-bottom: 0.5rem solid #b74b4b;
             }
         }
 
