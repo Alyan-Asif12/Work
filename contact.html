@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Contact - Alyan</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000; /* Full black background for the whole page */
+            color: #fff; /* White text color for contrast */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            background-color: black;
+            filter: drop-shadow(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #b74b4b;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b74b4b;
+            border-bottom: 3px solid #b74b4b;
+        }
+
+        @media(max-width:995px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                display: none;
+                top: 5rem;
+                right: 0;
+                width: 40%;
+                border-left: 3px solid #b74b4b;
+                border-bottom: 3px solid #b74b4b;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem solid;
+                background-color: #161616;
+                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #b74b4b;
+            }
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 5rem 9% 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+        }
+
+        .contact-note {
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .btn-hire {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: black;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: #b74b4b;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            border: 2px solid #b74b4b;
+            transition: 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-hire:hover {
+            transform: scale3d(1.03);
+            background-color: #b74b4b;
+            color: black;
+            box-shadow: 0 0 25px #b74b4b;
+        }
+
+        .btn-hire::after {
+            content: '\f061'; /* Font Awesome arrow icon */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-note {
+                font-size: 1.4rem;
+            }
+
+            .btn-hire {
+                font-size: 1.4rem;
+                padding: 0.8rem 2.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Alyan</a>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="contact-content">
+            <div class="contact-note">
+                <h1>Contact Me</h1>
+                <p>If you'd like to get in touch, please include the following details in your email:</p>
+                <ul>
+                    <li>Your name</li>
+                    <li>Your company (if applicable)</li>
+                    <li>Project details or inquiry</li>
+                    <li>Preferred method of contact</li>
+                </ul>
+                <p>I look forward to hearing from you!</p>
+            </div>
+            <a href="mailto:alyanasif49@gmail.com" class="btn-hire">Hire Me</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
