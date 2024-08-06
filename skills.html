@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Skills - Alyan</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000; /* Full black background for the whole page */
+            color: #fff; /* White text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #000; /* Ensure header background is black */
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #b74b4b;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b74b4b;
+            border-bottom: 3px solid #b74b4b;
+        }
+
+        .skills {
+            padding: 6rem 2rem 4rem; /* Add padding at the top to account for fixed header */
+            background: #000; /* Black background for the section */
+            text-align: center;
+            margin: 0 auto; /* Center the section and add margin */
+            max-width: 1200px;
+        }
+
+        .skills h1 {
+            margin-bottom: 3rem;
+            color: #fff; /* White color for heading text */
+            font-size: 3rem; /* Larger font size for heading */
+        }
+
+        .skill {
+            background: #C21E56; /* Rose-red background color for individual skill sections */
+            margin: 2rem auto;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow effect */
+            color: #000; /* Black color for text */
+            text-align: center;
+            max-width: 800px; /* Limit width for better alignment */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+        }
+
+        .skill:hover {
+            transform: translateY(-10px); /* Lift the skill card slightly on hover */
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+        }
+
+        .skill h3 {
+            margin-bottom: 1rem;
+            color: #000; /* Black color for headings */
+            font-size: 2rem; /* Adjust font size for headings */
+        }
+
+        .skill-logo {
+            width: 120px; /* Increased size of images */
+            margin: 0.5rem;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to logos */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .skill-logo:hover {
+            transform: scale(1.2); /* Enlarge logo on hover */
+        }
+
+        .skill p {
+            margin-top: 1rem;
+            font-size: 1.5rem; /* Larger text size for better readability */
+            color: #000; /* Black color for paragraph text */
+        }
+
+        .skills-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .skill {
+                padding: 2rem;
+                max-width: 100%;
+            }
+
+            .skill-logo {
+                width: 80px; /* Smaller size of images for mobile screens */
+            }
+
+            .skills h1 {
+                font-size: 2rem; /* Smaller font size for heading on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Alyan</a>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="https://www.example.com/education">Education</a>
+            <a href="https://www.example.com/experience">Experience</a>
+            <a href="https://www.example.com/contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skills" id="skills">
+        <div class="skills-content">
+            <h1>My Skills</h1>
+            <div class="skill">
+                <h3>Adobe Suite</h3>
+                <img src="adobe-photoshop.png" alt="Adobe Photoshop" class="skill-logo">
+                <img src="adobe-illustrator.png" alt="Adobe Illustrator" class="skill-logo">
+                <img src="adobe-premiere.png" alt="Adobe Premiere" class="skill-logo">
+                <p>Expertise in Adobe Photoshop, Illustrator, and Premiere for creating stunning graphics, illustrations, and professional video editing.</p>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <img src="html-logo.png" alt="HTML" class="skill-logo">
+                <img src="css-logo.png" alt="CSS" class="skill-logo">
+                <img src="js-logo.png" alt="JavaScript" class="skill-logo">
+                <p>Proficient in HTML, CSS, and JavaScript to build responsive and interactive websites.</p>
+            </div>
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <img src="python-logo.png" alt="Python" class="skill-logo">
+                <img src="java-logo.png" alt="Java" class="skill-logo">
+                <p>Strong command over Python and Java for developing efficient and robust applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
