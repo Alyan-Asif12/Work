@@ -12,18 +12,18 @@
         /* Inline CSS for simplicity */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #000; /* Full black background */
+            background: #000; /* Full black background for the whole page */
             color: #fff; /* White text color for contrast */
             margin: 0;
             padding: 0;
         }
-        
+
         header {
             background: #000; /* Ensure header background is black */
             padding: 1rem 2rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
-        
+
         .services {
             padding: 4rem 2rem;
             background: #C21E56; /* Rose-red background color for sections */
@@ -33,19 +33,19 @@
             max-width: 90%;
             box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Increased shadow effect */
         }
-        
+
         .services-content {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .services h1 {
             margin-bottom: 2rem;
             color: #fff; /* White color for heading text */
             font-size: 2.5rem; /* Larger font size for heading */
         }
-        
-        .services .service {
+
+        .service {
             background: #C21E56; /* Rose-red background color for individual sections */
             margin: 2rem 0;
             padding: 2rem;
@@ -54,33 +54,33 @@
             color: #000; /* Black color for text */
             text-align: center;
         }
-        
-        .services .service h3 {
+
+        .service h3 {
             margin-bottom: 1rem;
             color: #000; /* Black color for headings */
             font-size: 2rem; /* Adjust font size for headings */
         }
-        
-        .services .service-logo {
+
+        .service-logo {
             width: 100px; /* Increased size of images */
             margin: 0.5rem;
             display: inline-block;
         }
-        
-        .services .service p {
+
+        .service p {
             margin-top: 1rem;
             font-size: 1.4rem; /* Larger text size for better readability */
             color: #000; /* Black color for paragraph text */
         }
-        
+
         /* Responsive design for small screens */
         @media (max-width: 768px) {
             .services {
                 padding: 2rem 1rem;
                 max-width: 100%;
             }
-            
-            .services .service {
+
+            .service {
                 max-width: 100%;
                 margin: 1rem 0;
             }
