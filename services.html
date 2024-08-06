@@ -22,10 +22,14 @@
             background: #000; /* Ensure header background is black */
             padding: 1rem 2rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .services {
-            padding: 4rem 2rem;
+            padding: 6rem 2rem 4rem; /* Add padding at the top to account for fixed header */
             background: #000; /* Black background for the section */
             text-align: center;
             margin: 2rem auto; /* Center the section and add margin */
