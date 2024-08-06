@@ -12,7 +12,7 @@
         /* Inline CSS for simplicity */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #000; /* Black background for dark look */
+            background: #000; /* Full black background */
             color: #fff; /* White text color for contrast */
             margin: 0;
             padding: 0;
@@ -20,9 +20,12 @@
         
         .services {
             padding: 4rem 2rem;
-            background: #C21E56; /* Rose-red background color */
+            background: #C21E56; /* Rose-red background color for sections */
             text-align: center;
-            margin: 0;
+            border-radius: 10px;
+            margin: 2rem auto; /* Center the sections and add margin */
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow effect */
         }
         
         .services-content {
@@ -37,16 +40,13 @@
         }
         
         .services .service {
-            background: #fff;
-            margin: 2rem auto;
+            background: #C21E56; /* Rose-red background color for individual sections */
+            margin: 2rem 0;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             color: red; /* Red color for text */
             text-align: center;
-            max-width: 80%;
-            display: inline-block;
-            vertical-align: top;
         }
         
         .services .service h3 {
@@ -68,6 +68,11 @@
         
         /* Responsive design for small screens */
         @media (max-width: 768px) {
+            .services {
+                padding: 2rem 1rem;
+                max-width: 100%;
+            }
+            
             .services .service {
                 max-width: 100%;
                 margin: 1rem 0;
