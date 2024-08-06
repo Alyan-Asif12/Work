@@ -336,49 +336,7 @@ span {
 
 
 
-/* Services section */
-/* Reset some basic elements */
-body, h1, h3, p, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: inherit;
-}
 
-/* Body style */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-}
-
-/* Header style */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-header nav a {
-    color: #fff;
-    margin: 0 1rem;
-}
-
-header nav a.active {
-    border-bottom: 2px solid #fff;
-}
-
-header .hamburger {
-    display: none;
-}
 
 /* Services section */
 .services {
