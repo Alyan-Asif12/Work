@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Portfolio - Alyan</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000; /* Full black background for the whole page */
+            color: #fff; /* White text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #000; /* Ensure header background is black */
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #b74b4b;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b74b4b;
+            border-bottom: 3px solid #b74b4b;
+        }
+
+        .portfolio {
+            padding: 6rem 2rem 4rem; /* Add padding at the top to account for fixed header */
+            background: #000; /* Black background for the section */
+            text-align: center;
+            margin: 0 auto; /* Center the section and add margin */
+            max-width: 1200px;
+        }
+
+        .portfolio h1 {
+            margin-bottom: 3rem;
+            color: #fff; /* White color for heading text */
+            font-size: 3rem; /* Larger font size for heading */
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .portfolio-section {
+            background: #C21E56; /* Rose-red background color for sections */
+            margin: 2rem auto;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow effect */
+            color: #000; /* Black color for text */
+            text-align: center;
+            max-width: 800px; /* Limit width for better alignment */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s 0.5s forwards;
+        }
+
+        .portfolio-section:hover {
+            transform: translateY(-10px); /* Lift the section slightly on hover */
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+        }
+
+        .portfolio-section h3 {
+            margin-bottom: 1rem;
+            color: #000; /* Black color for headings */
+            font-size: 2rem; /* Adjust font size for headings */
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.7s 0.5s forwards;
+        }
+
+        .portfolio-section a {
+            color: #b74b4b;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.7s forwards;
+        }
+
+        .portfolio-section a:hover {
+            text-decoration: underline;
+        }
+
+        .portfolio-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.9s forwards;
+        }
+
+        .portfolio-images img {
+            width: 150px; /* Size of images */
+            margin: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to images */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .portfolio-images img:hover {
+            transform: scale(1.1); /* Enlarge image on hover */
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .portfolio-section {
+                padding: 2rem;
+                max-width: 100%;
+            }
+
+            .portfolio-images img {
+                width: 100px; /* Smaller size of images for mobile screens */
+            }
+
+            .portfolio h1 {
+                font-size: 2rem; /* Smaller font size for heading on mobile */
+            }
+        }
+        
+        @media (max-width: 995px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                display: none;
+                top: 5rem;
+                right: 0;
+                width: 40%;
+                border-left: 3px solid #b74b4b;
+                border-bottom: 3px solid #b74b4b;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem solid;
+                background-color: #161616;
+                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #b74b4b;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Alyan</a>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="https://www.example.com/contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-content">
+            <h1>My Portfolio</h1>
+
+            <!-- Showreel Section -->
+            <div class="portfolio-section">
+                <h3>Showreel</h3>
+                <iframe width="560" height="315" src="https://drive.google.com/file/d/15iD8Ce4kP73ztp-DemH32hLuh6WGpsLI/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video Editing Portfolio Section -->
+            <div class="portfolio-section">
+                <h3>Video Editing Portfolio</h3>
+                <a href="https://drive.google.com/drive/folders/1d_Tn79dDzGv9qGejlcZsZ-6Ex7Xpautw" target="_blank">View Video Editing Portfolio</a>
+            </div>
+
+            <!-- Graphics Design Section -->
+            <div class="portfolio-section">
+                <h3>Graphics Design Portfolio</h3>
+                <div class="portfolio-images">
+                    <!-- Placeholder images, replace with actual images -->
+                    <img src="placeholder1.jpg" alt="Graphics Design 1">
+                    <img src="placeholder2.jpg" alt="Graphics Design 2">
+                    <!-- Add up to 30 images here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
