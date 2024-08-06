@@ -73,3 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     currentWord = words[wordIndex];
     type();
 });
+
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('nav').classList.toggle('show');
+});
+
