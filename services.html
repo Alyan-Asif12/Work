@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <title>Services - Alyan</title>
     <style>
+        /* Inline CSS for simplicity */
         body {
             font-family: 'Poppins', sans-serif;
             background: #000; /* Full black background for the whole page */
@@ -20,7 +21,7 @@
         header {
             background: #000; /* Ensure header background is black */
             padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
             position: fixed;
             width: 100%;
             top: 0;
@@ -31,14 +32,8 @@
             padding: 6rem 2rem 4rem; /* Add padding at the top to account for fixed header */
             background: #000; /* Black background for the section */
             text-align: center;
-            margin: 0 auto; /* Center the section and add margin */
-            max-width: 1200px;
-        }
-
-        .services h1 {
-            margin-bottom: 3rem;
-            color: #fff; /* White color for heading text */
-            font-size: 3rem; /* Larger font size for heading */
+            margin: 2rem auto; /* Center the section and add margin */
+            max-width: 90%;
         }
 
         .service {
@@ -46,7 +41,7 @@
             margin: 2rem auto;
             padding: 3rem;
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow effect */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Increased shadow effect */
             color: #000; /* Black color for text */
             text-align: center;
             max-width: 800px; /* Limit width for better alignment */
@@ -62,7 +57,6 @@
             width: 120px; /* Increased size of images */
             margin: 0.5rem;
             display: inline-block;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to logos */
         }
 
         .service p {
@@ -74,6 +68,12 @@
         .services-content {
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .services h1 {
+            margin-bottom: 3rem;
+            color: #fff; /* White color for heading text */
+            font-size: 3rem; /* Larger font size for heading */
         }
 
         /* Responsive design for small screens */
